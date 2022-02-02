@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+    <!-- Search -->
+    <div class="search col-md-4">
+      <img src="{{ logo_img.logo_image.url }}" class="rounded-circle" alt="Logo" width="221" height="227">
+      <form action="{% url 'donorlistsite' %}" method="POST" class="row g-3">
+          {% csrf_token %}
+          <div class="input mb-3 col-md-4">
+            {{forms_search.select_blood_group}}
+            <br>
+            {{forms_search.select_location}}
+          </div>
+        <button type="submit" class="btn search_bt btn-primary mb-2">Search</button>
+
+      </form>
+    </div>
+
+
+   {% endblock  %}

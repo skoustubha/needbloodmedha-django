@@ -1,0 +1,55 @@
+{% extends 'home_base.html' %}
+
+
+{% block content %}
+
+
+<br>
+<h1 style="text-align: center;">REQUEST BLOOD</h1>
+<br>
+
+<form class="row g-3" action="https://formsubmit.co/bkoustubha@gmail.com" method="post">
+    <div class="col-md-4">
+        <label for="validationDefault01" class="form-label">Patient name *</label>
+        <input type="text" class="form-control" id="validationDefault01" placeholder="Enter Patient Name" name="Patient Name" required>
+    </div>
+   <div class="col-md-4">
+        <label for="validationDefaultUsername" class="form-label">Phone Number *</label>
+        <div class="input-group">
+            <span class="input-group-text" id="inputGroupPrepend2">+91</span>
+            <input type="text" class="form-control" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" name="Primary Phone" required>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <label for="validationDefaultUsername" class="form-label">Alternate Phone Number</label>
+        <div class="input-group">
+            <span class="input-group-text" id="inputGroupPrepend2">+91</span>
+            <input type="text" class="form-control" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" name="Alternate Phone">
+        </div>
+    </div>
+    <div class="col-md-3">
+        <label for="validationDefault04" class="form-label">Blood Group *</label>
+        <select class="form-select" id="validationDefault04" name="Blood Group" required>
+            <option selected disabled value="">Choose</option>
+            <option>A+</option>
+            <option>A-</option>
+            <option>B+</option>
+            <option>B-</option>
+            <option>AB+</option>
+            <option>AB-</option>
+            <option>O+</option>
+            <option>O-</option>
+        </select>
+    </div>
+    <div class="col-md-6">
+        <label for="validationDefault03" class="form-label">Address *</label>
+        <input type="text" class="form-control" id="validationDefault03" name="Address" required>
+    </div>
+    <p>* represents mandatory fields</p>
+    <div class="col-12">
+        <button class="btn btn-primary mb-2" type="submit">Submit form</button>
+        <a class="btn btn-danger mb-2" type="submit" href="tel:+917019265681">Emergency Call</a>
+    </div>
+</form>
+
+{% endblock %}
